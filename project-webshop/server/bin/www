@@ -9,7 +9,6 @@ var debug = require('debug')('server:server');
 var http = require('http');
 
 /**
- * Get port from environment and store in Express.
  */
 
 var port = normalizePort(process.env.PORT || '5001');
@@ -90,8 +89,3 @@ function onError(error) {
  * Event listener for HTTP server "listening" event.
  */
 
-function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
-  debug('Listening on ' + bind);
-}
